@@ -53,16 +53,16 @@ Skilled in both web development and mobile applications. I'm driven by technical
 
 ## 📌 Featured Projects
 
-### 🧱 Next 15 + React 19 — Starter Template
+### 🧱 Next 15 + React 19 — Starter Template (In Progress)
 > Production-ready Full Stack template built with Next.js 15 and React 19. Designed to accelerate project kickoffs with best practices from the very first commit.
 
-### 🌐 Personal Portfolio
+### 🌐 Personal Portfolio (In Progress)
 > My own portfolio built with Next.js and React. A direct reflection of how I work and my attention to frontend detail.
 
-### ⚙️ Personal Project with Angular
+### ⚙️ Personal Project with Angular (In Progress)
 > Web application developed with Angular as part of my exploration of different frontend frameworks and their ecosystems.
 
-### 🎵 Spotify Clone
+### 🎵 Spotify Clone (Pending Audit)
 > Functional Spotify clone built as a learning project. Reproduces the main interface and features of the platform, putting frontend skills and API consumption to the test.
 
 ---

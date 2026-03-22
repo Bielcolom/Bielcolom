@@ -53,16 +53,16 @@ Capacitado tanto para desarrollo web como en aplicaciones móviles. Me mueve la 
 
 ## 📌 Proyectos destacados
 
-### 🧱 Next 15 + React 19 — Starter Template
+### 🧱 Next 15 + React 19 — Starter Template (En Progreso)
 > Plantilla Full Stack lista para producción con Next.js 15 y React 19. Diseñada para acelerar el arranque de nuevos proyectos con buenas prácticas desde el primer commit.
 
-### 🌐 Portfolio personal
+### 🌐 Portfolio personal (En Progreso)
 > Mi propio portfolio desarrollado con Next.js y React. Reflejo directo de mi forma de trabajar y mi atención al detalle en el frontend.
 
-### ⚙️ Proyecto personal con Angular
+### ⚙️ Proyecto personal con Angular (En Progreso)
 > Aplicación web desarrollada con Angular como parte de mi exploración de distintos frameworks frontend y su ecosistema.
 
-### 🎵 Réplica de Spotify
+### 🎵 Réplica de Spotify (Pendiente de auditoría)
 > Clon funcional de Spotify desarrollado como proyecto de aprendizaje. Reproduce la interfaz y funcionalidades principales de la plataforma, poniendo a prueba habilidades de frontend y consumo de APIs.
 
 ---
