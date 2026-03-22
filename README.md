@@ -62,7 +62,7 @@ Skilled in both web development and mobile applications. I'm driven by technical
 ### ⚙️ Personal Project with Angular (In Progress)
 > Web application developed with Angular as part of my exploration of different frontend frameworks and their ecosystems.
 
-### 🎵 Spotify Clone (Pending Audit)
+### 🎵 Spotify Clone (Pending cloud storage addition)
 > Functional Spotify clone built as a learning project. Reproduces the main interface and features of the platform, putting frontend skills and API consumption to the test.
 
 ---

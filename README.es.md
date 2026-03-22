@@ -62,7 +62,7 @@ Capacitado tanto para desarrollo web como en aplicaciones móviles. Me mueve la 
 ### ⚙️ Proyecto personal con Angular (En Progreso)
 > Aplicación web desarrollada con Angular como parte de mi exploración de distintos frameworks frontend y su ecosistema.
 
-### 🎵 Réplica de Spotify (Pendiente de auditoría)
+### 🎵 Réplica de Spotify (Pendiente de añadir almacenamiento en la nube)
 > Clon funcional de Spotify desarrollado como proyecto de aprendizaje. Reproduce la interfaz y funcionalidades principales de la plataforma, poniendo a prueba habilidades de frontend y consumo de APIs.
 
 ---
