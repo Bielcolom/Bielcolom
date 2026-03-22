@@ -1,7 +1,7 @@
 <h1 align="center">Gabriel Colom Moll</h1>
 
 <p align="center">
-  <strong>Desarrollador Web Full Stack</strong> · Palma de Mallorca<br/>
+  <strong>Desarrollador Web Full Stack</strong>
   <em>Técnico Superior en ASIR · Estudiante de Ingeniería Informática (UOC)</em>
 </p>
 
@@ -9,7 +9,6 @@
   <a href="mailto:gabrielcolomoll@gmail.com">
     <img src="https://img.shields.io/badge/Email-gabrielcolomoll%40gmail.com-0d1117?style=flat-square&logo=gmail&logoColor=white&labelColor=333"/>
   </a>
-  <img src="https://img.shields.io/badge/Ubicación-Palma%20de%20Mallorca-0d1117?style=flat-square&logo=googlemaps&logoColor=white&labelColor=333"/>
   <img src="https://img.shields.io/badge/Disponibilidad-Abierto%20a%20oportunidades-0d1117?style=flat-square&logo=checkmarx&logoColor=4ade80&labelColor=333"/>
 </p>
 
