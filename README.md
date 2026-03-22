@@ -61,19 +61,6 @@ Me mueve la curiosidad técnica, el trabajo bien hecho y la mejora constante. Di
 
 ---
 
-## 📊 Estadísticas de GitHub
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=TU_USUARIO&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=TU_USUARIO&layout=compact&theme=github_dark&hide_border=true&langs_count=8" height="165"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=TU_USUARIO&theme=github-dark-blue&hide_border=true&date_format=j%20M%5B%20Y%5D" />
-</p>
-
----
-
 ## 🎓 Formación y reconocimientos
 
 - 🏆 **3er Premio — Mejores Proyectos Empresariales de Estudiantes** · PalmaActiva (2024)
