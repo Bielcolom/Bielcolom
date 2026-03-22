@@ -1,28 +1,34 @@
 <h1 align="center">Gabriel Colom Moll</h1>
 
 <p align="center">
-  <strong>Desarrollador Web Full Stack</strong>
-  <em>Técnico Superior en ASIR · Estudiante de Ingeniería Informática (UOC)</em>
+  <strong>Full Stack Web Developer</strong><br/>
+  <em>Higher Technician in ASIR · Computer Engineering Student (UOC)</em>
 </p>
 
 <p align="center">
-  <a href="/cdn-cgi/l/email-protection#8cebedeefee5e9e0efe3e0e3e1e3e0e0ccebe1ede5e0a2efe3e1">
+  <a href="mailto:gabrielcolomoll@gmail.com">
     <img src="https://img.shields.io/badge/Email-gabrielcolomoll%40gmail.com-0d1117?style=flat-square&logo=gmail&logoColor=white&labelColor=333"/>
   </a>
-  <img src="https://img.shields.io/badge/Disponibilidad-Abierto%20a%20oportunidades-0d1117?style=flat-square&logo=checkmarx&logoColor=4ade80&labelColor=333"/>
+  <img src="https://img.shields.io/badge/Status-Open%20to%20opportunities-0d1117?style=flat-square&logo=checkmarx&logoColor=4ade80&labelColor=333"/>
+</p>
+
+<p align="center">
+  <a href="README.md"><img src="https://img.shields.io/badge/🇬🇧-English-0d1117?style=flat-square&labelColor=555&color=0d1117"/></a>
+  &nbsp;
+  <a href="README.es.md"><img src="https://img.shields.io/badge/🇪🇸-Español-0d1117?style=flat-square&labelColor=333&color=555"/></a>
 </p>
 
 ---
 
-## Sobre mí
+## About me
 
-Soy un desarrollador Full Stack de 23 años con experiencia real en producción y una visión orientada a construir productos de calidad. Actualmente trabajo en **WOZZO** como desarrollador web desde marzo de 2024, combinándolo con mis estudios en el Grado de Ingeniería Informática en la UOC.
+I'm a 23-year-old Full Stack developer with real production experience and a product-oriented mindset focused on building quality software. I currently work at **WOZZO** as a web developer since March 2024, while pursuing my Computer Engineering degree at UOC.
 
-Capacitado tanto para desarrollo web, como en aplicaciones móviles. Me mueve la curiosidad técnica, el trabajo bien hecho y la mejora constante. Disfruto enfrentándome a problemas complejos y encontrando soluciones limpias y escalables.
+Skilled in both web development and mobile applications. I'm driven by technical curiosity, craftsmanship, and continuous improvement. I enjoy tackling complex problems and finding clean, scalable solutions.
 
 ---
 
-## 🛠️ Stack tecnológico
+## 🛠️ Tech Stack
 
 ### Frontend
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
@@ -34,49 +40,50 @@ Capacitado tanto para desarrollo web, como en aplicaciones móviles. Me mueve la
 ![Astro](https://img.shields.io/badge/Astro-FF5D01?style=flat-square&logo=astro&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 
-### Backend & Base de datos
+### Backend & Databases
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 
-### Herramientas
+### Tools
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 
 ---
 
-## 📌 Proyectos destacados
+## 📌 Featured Projects
 
 ### 🧱 Next 15 + React 19 — Starter Template
-> Plantilla Full Stack lista para producción con Next.js 15 y React 19. Diseñada para acelerar el arranque de nuevos proyectos con buenas prácticas desde el primer commit.
+> Production-ready Full Stack template built with Next.js 15 and React 19. Designed to accelerate project kickoffs with best practices from the very first commit.
 
-### 🌐 Portfolio personal
-> Mi propio portfolio desarrollado con Next.js y React. Reflejo directo de mi forma de trabajar y mi atención al detalle en el frontend.
+### 🌐 Personal Portfolio
+> My own portfolio built with Next.js and React. A direct reflection of how I work and my attention to frontend detail.
 
-### ⚙️ Proyecto personal con Angular
-> Aplicación web desarrollada con Angular como parte de mi exploración de distintos frameworks frontend y su ecosistema.
+### ⚙️ Personal Project with Angular
+> Web application developed with Angular as part of my exploration of different frontend frameworks and their ecosystems.
 
-### 🎵 Réplica de Spotify
-> Clon funcional de Spotify desarrollado como proyecto de aprendizaje. Reproduce la interfaz y funcionalidades principales de la plataforma, poniendo a prueba habilidades de frontend y consumo de APIs.
-
----
-
-## 🎓 Formación y reconocimientos
-
-- 🏆 **3er Premio — Mejores Proyectos Empresariales de Estudiantes** · PalmaActiva (2024)
-- 🎓 Grado en Ingeniería Informática · Universitat Oberta de Catalunya *(en curso)*
-- 📘 FP Grado Superior ASIR · Colegio Sant Josep Obrer (2022–2024)
-- 📐 Álgebra Lineal, Probabilidad para ML & Big Data, Python · Udemy / Sant Josep Obrer
+### 🎵 Spotify Clone
+> Functional Spotify clone built as a learning project. Reproduces the main interface and features of the platform, putting frontend skills and API consumption to the test.
 
 ---
 
-## 🌍 Idiomas
+## 🎓 Education & Awards
 
-- 🇪🇸 Castellano y Catalán — Nativo
-- 🇬🇧 Inglés — Nivel medio
+- 🏆 **3rd Prize — Best Student Business Projects** · PalmaActiva (2024)
+- 🎓 B.Sc. in Computer Engineering · Universitat Oberta de Catalunya *(in progress)*
+- 📘 Higher Vocational Training in ASIR · Colegio Sant Josep Obrer (2022–2024)
+- 📐 Linear Algebra, Probability for ML & Big Data, Python · Udemy / Sant Josep Obrer
+
+---
+
+## 🌍 Languages
+
+- 🇪🇸 Spanish & Catalan — Native
+- 🇬🇧 English — Intermediate
 
 ---
 
 <p align="center">
-  <em>Abierto a nuevas oportunidades y colaboraciones. No dudes en escribirme.</em><br/>
-  <a href="/cdn-cgi/l/email-prot
+  <em>Open to new opportunities and collaborations. Feel free to reach out.</em><br/>
+  <a href="mailto:gabrielcolomoll@gmail.com">gabrielcolomoll@gmail.com</a>
+</p>
