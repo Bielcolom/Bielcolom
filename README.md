@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="mailto:gabrielcolomoll@gmail.com">
+  <a href="/cdn-cgi/l/email-protection#8cebedeefee5e9e0efe3e0e3e1e3e0e0ccebe1ede5e0a2efe3e1">
     <img src="https://img.shields.io/badge/Email-gabrielcolomoll%40gmail.com-0d1117?style=flat-square&logo=gmail&logoColor=white&labelColor=333"/>
   </a>
   <img src="https://img.shields.io/badge/Disponibilidad-Abierto%20a%20oportunidades-0d1117?style=flat-square&logo=checkmarx&logoColor=4ade80&labelColor=333"/>
@@ -18,7 +18,7 @@
 
 Soy un desarrollador Full Stack de 23 años con experiencia real en producción y una visión orientada a construir productos de calidad. Actualmente trabajo en **WOZZO** como desarrollador web desde marzo de 2024, combinándolo con mis estudios en el Grado de Ingeniería Informática en la UOC.
 
-Me mueve la curiosidad técnica, el trabajo bien hecho y la mejora constante. Disfruto enfrentándome a problemas complejos y encontrando soluciones limpias y escalables.
+Capacitado tanto para desarrollo web, como en aplicaciones móviles. Me mueve la curiosidad técnica, el trabajo bien hecho y la mejora constante. Disfruto enfrentándome a problemas complejos y encontrando soluciones limpias y escalables.
 
 ---
 
@@ -31,6 +31,7 @@ Me mueve la curiosidad técnica, el trabajo bien hecho y la mejora constante. Di
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
 ![React Native](https://img.shields.io/badge/React%20Native-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white)
+![Astro](https://img.shields.io/badge/Astro-FF5D01?style=flat-square&logo=astro&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 
 ### Backend & Base de datos
@@ -53,7 +54,7 @@ Me mueve la curiosidad técnica, el trabajo bien hecho y la mejora constante. Di
 > Mi propio portfolio desarrollado con Next.js y React. Reflejo directo de mi forma de trabajar y mi atención al detalle en el frontend.
 
 ### ⚙️ Proyecto personal con Angular
-> Aplicación web Full Stack desarrollada con Angular como parte de mi exploración de distintos frameworks frontend y su ecosistema.
+> Aplicación web desarrollada con Angular como parte de mi exploración de distintos frameworks frontend y su ecosistema.
 
 ### 🎵 Réplica de Spotify
 > Clon funcional de Spotify desarrollado como proyecto de aprendizaje. Reproduce la interfaz y funcionalidades principales de la plataforma, poniendo a prueba habilidades de frontend y consumo de APIs.
@@ -78,5 +79,4 @@ Me mueve la curiosidad técnica, el trabajo bien hecho y la mejora constante. Di
 
 <p align="center">
   <em>Abierto a nuevas oportunidades y colaboraciones. No dudes en escribirme.</em><br/>
-  <a href="mailto:gabrielcolomoll@gmail.com">gabrielcolomoll@gmail.com</a>
-</p>
+  <a href="/cdn-cgi/l/email-prot
