@@ -53,7 +53,7 @@ Capacitado tanto para desarrollo web como en aplicaciones móviles. Me mueve la 
 
 ## 📌 Proyectos destacados
 
-### 🎼 Plataforma Social para Músicos (En desarrollo)
+### 🎼 Plataforma Social para Músicos (En desarrollo prioritario)
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![React Native](https://img.shields.io/badge/React%20Native-61DAFB?style=flat-square&logo=react&logoColor=black) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
 
