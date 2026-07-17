@@ -22,7 +22,7 @@
 
 ## About me
 
-I'm a 23-year-old Full Stack developer with real production experience and a product-oriented mindset focused on building quality software. I currently work at **WOZZO** as a web developer since March 2024, while pursuing my Computer Engineering degree at UOC.
+I'm a 24-year-old Full Stack developer with real production experience and a product-oriented mindset focused on building quality software. I currently work at **WOZZO** as a web developer since March 2024, while pursuing my Computer Engineering degree at UOC.
 
 Skilled in both web development and mobile applications. I'm driven by technical curiosity, craftsmanship, and continuous improvement. I enjoy tackling complex problems and finding clean, scalable solutions.
 
