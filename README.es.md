@@ -54,21 +54,51 @@ Capacitado tanto para desarrollo web como en aplicaciones móviles. Me mueve la 
 ## 📌 Proyectos destacados
 
 ### 🎼 Plataforma Social para Músicos (En desarrollo)
+
+**Tecnologías:**  
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![React Native](https://img.shields.io/badge/React%20Native-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+
 > Red social Full Stack para músicos, desarrollada tanto como aplicación web como móvil. Permite a los usuarios crear perfiles, compartir contenido, interactuar con otros artistas y reproducir audio de forma integrada, con un enfoque en el rendimiento, la escalabilidad y una excelente experiencia de usuario.
 
-### 🧱 Next 15 + React 19 — Starter Template (En Progreso)
+### 🧱 Next 15 + React 19 — Starter Template (En progreso)
+
+**Tecnologías:**  
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+
 > Plantilla Full Stack lista para producción con Next.js 15 y React 19. Diseñada para acelerar el arranque de nuevos proyectos con buenas prácticas desde el primer commit.
 
-### 🌐 Portfolio personal (En Progreso)
+### 🌐 Portfolio personal (En progreso)
+
+**Tecnologías:**  
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+
 > Mi propio portfolio desarrollado con Next.js y React. Reflejo directo de mi forma de trabajar y mi atención al detalle en el frontend.
 
-### ⚙️ Proyecto personal con Angular (En Progreso)
+### ⚙️ Proyecto personal con Angular (En progreso)
+
+**Tecnologías:**  
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+
 > Aplicación web desarrollada con Angular como parte de mi exploración de distintos frameworks frontend y su ecosistema.
 
 ### 🎵 Réplica de Spotify (Pendiente de añadir almacenamiento en la nube)
-> Clon funcional de Spotify desarrollado como proyecto de aprendizaje. Reproduce la interfaz y funcionalidades principales de la plataforma, poniendo a prueba habilidades de frontend y consumo de APIs.
 
----
+**Tecnologías:**  
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+
+> Clon funcional de Spotify desarrollado como proyecto de aprendizaje. Reproduce la interfaz y funcionalidades principales de la plataforma, poniendo a prueba habilidades de frontend y consumo de APIs.
 
 ## 🎓 Formación y reconocimientos
 
