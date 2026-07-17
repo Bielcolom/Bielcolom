@@ -53,6 +53,9 @@ Skilled in both web development and mobile applications. I'm driven by technical
 
 ## 📌 Featured Projects
 
+### 🎼 Music Social Platform (In Progress)
+> Full Stack social network for musicians, developed as both a web application and mobile app. Includes user profiles, content sharing, social interactions, and integrated audio streaming, with a strong focus on performance, scalability, and user experience.
+
 ### 🧱 Next 15 + React 19 — Starter Template (In Progress)
 > Production-ready Full Stack template built with Next.js 15 and React 19. Designed to accelerate project kickoffs with best practices from the very first commit.
 
