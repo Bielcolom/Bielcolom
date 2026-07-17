@@ -22,7 +22,7 @@
 
 ## Sobre mí
 
-Soy un desarrollador Full Stack de 23 años con experiencia real en producción y una visión orientada a construir productos de calidad. Actualmente trabajo en **WOZZO** como desarrollador web desde marzo de 2024, combinándolo con mis estudios en el Grado de Ingeniería Informática en la UOC.
+Soy un desarrollador Full Stack de 24 años con experiencia real en producción y una visión orientada a construir productos de calidad. Actualmente trabajo en **WOZZO** como desarrollador web desde marzo de 2024, combinándolo con mis estudios en el Grado de Ingeniería Informática en la UOC.
 
 Capacitado tanto para desarrollo web como en aplicaciones móviles. Me mueve la curiosidad técnica, el trabajo bien hecho y la mejora constante. Disfruto enfrentándome a problemas complejos y encontrando soluciones limpias y escalables.
 
@@ -52,6 +52,9 @@ Capacitado tanto para desarrollo web como en aplicaciones móviles. Me mueve la 
 ---
 
 ## 📌 Proyectos destacados
+
+### 🎼 Plataforma Social para Músicos (En desarrollo)
+> Red social Full Stack para músicos, desarrollada tanto como aplicación web como móvil. Permite a los usuarios crear perfiles, compartir contenido, interactuar con otros artistas y reproducir audio de forma integrada, con un enfoque en el rendimiento, la escalabilidad y una excelente experiencia de usuario.
 
 ### 🧱 Next 15 + React 19 — Starter Template (En Progreso)
 > Plantilla Full Stack lista para producción con Next.js 15 y React 19. Diseñada para acelerar el arranque de nuevos proyectos con buenas prácticas desde el primer commit.
