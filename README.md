@@ -9,6 +9,9 @@
   <a href="mailto:gabrielcolomoll@gmail.com">
     <img src="https://img.shields.io/badge/Email-gabrielcolomoll%40gmail.com-0d1117?style=flat-square&logo=gmail&logoColor=white&labelColor=333"/>
   </a>
+  <a href="https://portfolio-q98a7fktn-biels-projects-652de759.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-Visit%20website-0d1117?style=flat-square&logo=vercel&logoColor=white&labelColor=333"/>
+  </a>
   <img src="https://img.shields.io/badge/Status-Open%20to%20opportunities-0d1117?style=flat-square&logo=checkmarx&logoColor=4ade80&labelColor=333"/>
 </p>
 
