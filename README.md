@@ -74,11 +74,13 @@ Skilled in both web development and mobile applications. I'm driven by technical
 
 > Production-ready Full Stack template built with Next.js 15 and React 19. Designed to accelerate project kickoffs with best practices from the very first commit.
 
-### 🌐 Personal Portfolio (In Progress)
+### 🌐 [Personal Portfolio](https://portfolio-q98a7fktn-biels-projects-652de759.vercel.app/) (In Progress)
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Public](https://img.shields.io/badge/Public-Repository-22c55e?style=flat-square&logo=github&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Live](https://img.shields.io/badge/Live-Website-22c55e?style=flat-square&logo=vercel&logoColor=white)
 
 > My personal portfolio built with Next.js and React. A direct reflection of my development approach and attention to detail in frontend engineering.
+
+> 🔗 **Live website:** [portfolio-q98a7fktn-biels-projects-652de759.vercel.app](https://portfolio-q98a7fktn-biels-projects-652de759.vercel.app/)
 
 ### ⚙️ Angular Personal Project (In Progress)
 
