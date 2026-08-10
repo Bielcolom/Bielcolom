@@ -83,7 +83,7 @@ Skilled in both web development and mobile applications. I'm driven by technical
 
 > My personal portfolio built with Next.js and React. A direct reflection of my development approach and attention to detail in frontend engineering.
 
-> 🔗 **Live website:** [gcolom.com](https://portfolio-q98a7fktn-biels-projects-652de759.vercel.app/)
+> 🔗 **Live website:** [gcolom.com](https://gcolom.com/)
 
 ### ⚙️ Angular Personal Project (In Progress)
 
