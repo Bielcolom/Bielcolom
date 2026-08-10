@@ -9,7 +9,7 @@
   <a href="mailto:gabrielcolomoll@gmail.com">
     <img src="https://img.shields.io/badge/Email-gabrielcolomoll%40gmail.com-0d1117?style=flat-square&logo=gmail&logoColor=white&labelColor=333"/>
   </a>
-  <a href="https://portfolio-q98a7fktn-biels-projects-652de759.vercel.app/" target="_blank">
+  <a href="https://gcolom.com/" target="_blank">
     <img src="https://img.shields.io/badge/Portfolio-Visit%20website-0d1117?style=flat-square&logo=vercel&logoColor=white&labelColor=333"/>
   </a>
   <img src="https://img.shields.io/badge/Status-Open%20to%20opportunities-0d1117?style=flat-square&logo=checkmarx&logoColor=4ade80&labelColor=333"/>
@@ -83,7 +83,7 @@ Skilled in both web development and mobile applications. I'm driven by technical
 
 > My personal portfolio built with Next.js and React. A direct reflection of my development approach and attention to detail in frontend engineering.
 
-> 🔗 **Live website:** [portfolio-q98a7fktn-biels-projects-652de759.vercel.app](https://portfolio-q98a7fktn-biels-projects-652de759.vercel.app/)
+> 🔗 **Live website:** [gcolom.com](https://portfolio-q98a7fktn-biels-projects-652de759.vercel.app/)
 
 ### ⚙️ Angular Personal Project (In Progress)
 
