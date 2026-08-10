@@ -9,7 +9,7 @@
   <a href="mailto:gabrielcolomoll@gmail.com">
     <img src="https://img.shields.io/badge/Email-gabrielcolomoll%40gmail.com-0d1117?style=flat-square&logo=gmail&logoColor=white&labelColor=333"/>
   </a>
-  <a href="https://portfolio-q98a7fktn-biels-projects-652de759.vercel.app/">
+  <a href="https://gcolom.com/">
     <img src="https://img.shields.io/badge/Portfolio-Ver%20portfolio-0d1117?style=flat-square&logo=vercel&logoColor=white&labelColor=333"/>
   </a>
   <img src="https://img.shields.io/badge/Disponibilidad-Abierto%20a%20oportunidades-0d1117?style=flat-square&logo=checkmarx&logoColor=4ade80&labelColor=333"/>
@@ -79,7 +79,7 @@ Capacitado tanto para desarrollo web como en aplicaciones móviles. Me mueve la 
 
 ### 🌐 [Portfolio personal](https://portfolio-q98a7fktn-biels-projects-652de759.vercel.app/) (En progreso)
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) [![Web](https://img.shields.io/badge/Web-Ver%20portfolio-22c55e?style=flat-square&logo=vercel&logoColor=white)](https://portfolio-q98a7fktn-biels-projects-652de759.vercel.app/)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) [![Web](https://img.shields.io/badge/Web-Ver%20portfolio-22c55e?style=flat-square&logo=vercel&logoColor=white)](https://gcolom.com/)
 
 > Mi portfolio personal desarrollado con Next.js, React y TypeScript. Refleja mi forma de trabajar, mi atención al detalle y mi enfoque en la creación de interfaces modernas, funcionales y cuidadas.
 
