@@ -83,7 +83,7 @@ Capacitado tanto para desarrollo web como en aplicaciones móviles. Me mueve la 
 
 > Mi portfolio personal desarrollado con Next.js, React y TypeScript. Refleja mi forma de trabajar, mi atención al detalle y mi enfoque en la creación de interfaces modernas, funcionales y cuidadas.
 
-> 🔗 **Visitar portfolio:** [portfolio-q98a7fktn-biels-projects-652de759.vercel.app](https://portfolio-q98a7fktn-biels-projects-652de759.vercel.app/)
+> 🔗 **Visitar portfolio:** [gcolom.com](https://gcolom.com/)
 
 ### ⚙️ Proyecto personal con Angular (En progreso)
 
