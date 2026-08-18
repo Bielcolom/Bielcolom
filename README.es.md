@@ -71,13 +71,13 @@ Capacitado tanto para desarrollo web como en aplicaciones móviles. Me mueve la 
 
 > Red social Full Stack para músicos, desarrollada tanto como aplicación web como móvil. Permite a los usuarios crear perfiles, compartir contenido, interactuar con otros artistas y reproducir audio de forma integrada, con un enfoque en el rendimiento, la escalabilidad y una excelente experiencia de usuario.
 
-### 🧱 Next 15 + React 19 — Starter Template (En progreso)
+### 🧱 Next 15 + React 19 — Starter Template 
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![Público](https://img.shields.io/badge/Repositorio-Público-22c55e?style=flat-square&logo=github&logoColor=white)
 
 > Plantilla Full Stack lista para producción con Next.js 15 y React 19. Diseñada para acelerar el arranque de nuevos proyectos con buenas prácticas desde el primer commit.
 
-### 🌐 [Portfolio personal](https://portfolio-q98a7fktn-biels-projects-652de759.vercel.app/) (En progreso)
+### 🌐 [Portfolio personal](https://gcolom.com/)
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) [![Web](https://img.shields.io/badge/Web-Ver%20portfolio-22c55e?style=flat-square&logo=vercel&logoColor=white)](https://gcolom.com/)
 
