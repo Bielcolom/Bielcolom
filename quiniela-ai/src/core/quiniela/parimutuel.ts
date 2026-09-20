@@ -306,11 +306,27 @@ function makeRng(seed: number): () => number {
 }
 
 /**
- * Valor de cada signo frente a lo que juega el publico. Positivo = el modelo
- * le da mas probabilidad de la que el mercado popular le asigna, asi que el
- * premio se compartiria con menos gente de lo que compensa el riesgo.
+ * Cociente de valor de cada signo: probabilidad del modelo dividida por la
+ * fraccion que juega el publico. Por encima de 1, el signo esta infrajugado.
  *
- * Es el indicador que decide DONDE poner los dobles.
+ * CUIDADO — NO es un criterio de seleccion por si solo.
+ *
+ * Construir la columna eligiendo en cada partido el signo de mayor p/q es una
+ * trampa conocida: se maximiza el cociente y se destruye la probabilidad. La
+ * columna resultante puede ser tan improbable que no gane nunca, y rendir
+ * menos que jugar a favoritos.
+ *
+ * El motivo esta en la formula del reparto:
+ *
+ *   EV_14(c) = W_14 * P(c) * (1 - e^-lambda) / lambda      lambda = N * Q(c)
+ *
+ * Con lambda >> 1 el EV depende solo de P/Q y apartarse de la masa paga mucho.
+ * Con lambda << 1 uno ya es acertante unico, el factor de reparto satura cerca
+ * de 1 y no puede mejorar mas: a partir de ahi, cualquier rareza adicional
+ * solo puede costar probabilidad.
+ *
+ * El criterio correcto es maximizar P sujeto a que lambda se mantenga en la
+ * zona util (del orden de 1 a 4 rivales esperados). Ver `optimizeBaseColumn`.
  */
 export function signValue(
   modelProbs: { readonly '1': number; readonly X: number; readonly '2': number },

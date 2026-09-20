@@ -490,6 +490,197 @@ De ahí el diseño, que es deliberadamente restrictivo:
 
 ---
 
+## 8.bis Estrategia: la parte que casi todos los sistemas hacen mal
+
+### La fórmula que casi nadie escribe bien
+
+Si `λ = N·Q(c)` son las apuestas rivales esperadas sobre tu combinación:
+
+```
+EV₁₄(c) = W₁₄ · P(c) · (1 − e^(−λ)) / λ
+```
+
+Tiene **dos regímenes**, y confundirlos es el error central:
+
+- **λ ≫ 1** (boleto popular): `EV₁₄ ≈ α₁₄·0,75·(P/Q)`. Solo importa el cociente
+  de valor. **Apartarse de la masa paga mucho.**
+- **λ ≪ 1** (boleto exótico): `EV₁₄ ≈ W₁₄·P(c)`. Ya eres acertante único.
+  **Ser más raro deja de aportar; solo resta probabilidad.**
+
+### La trampa del p/q
+
+> **Maximizar `∏(p/q)` es una trampa.** Es la regla que parece seguirse de "apuesta
+> a lo infravalorado", y es incorrecta: la columna resultante puede ser tan
+> improbable que no gane nunca.
+
+Verificado en nuestro propio motor exacto. El factor de reparto `(1−e^(−λ))/λ`
+recorre todo su rango **antes de λ≈1**:
+
+| λ (rivales esperados) | Factor de reparto |
+|---|---|
+| 756 | 0,1 % |
+| 50 | 2,0 % |
+| 13 | 7,7 % |
+| 3,4 | 28,8 % |
+| **1** | **63,2 %** |
+| 0,1 | 95,2 % |
+| 0,01 | 99,5 % |
+
+De λ=20 a λ=1 se gana un **1.100 %**. De λ=1 a λ=0,01, solo un **57 %**.
+
+→ **Sé contrario hasta que el público espere jugar 1–4 apuestas a tu
+combinación. Ni un paso más.** Formalmente: `max P(c) s.a. N·Q(c) ≲ λ*`.
+Implementado en `optimizer.ts` (`optimizeBaseColumn`).
+
+> Nota de implementación: la primera versión del optimizador usaba relajación
+> lagrangiana y hubo que descartarla. Al cruzar cada umbral de θ, **todos los
+> partidos del mismo perfil cambian de signo a la vez**, así que solo se
+> obtienen los vértices de la envolvente convexa — en pruebas, una frontera de
+> 3 puntos con saltos de cinco órdenes de magnitud en λ. La construcción voraz
+> de un partido cada vez da 11 puntos con transiciones finas.
+
+### El teorema de la planitud
+
+```
+Σ_c Q(c)·EV_k(c) = W_k/N     para toda categoría k
+```
+
+> **Si el público apostara exactamente según las probabilidades reales (`q = p`),
+> todas las combinaciones tendrían idéntico EV y ninguna estrategia añadiría
+> valor.** Todo el valor explotable procede exacta y únicamente de `q ≠ p`.
+
+Y su corolario incómodo: **el retorno medio ponderado por las apuestas del
+público es exactamente el 55 %. Es una identidad, no una estimación.** Toda
+estrategia contraria es *redistribución pura* entre quinielistas: lo que ganas
+de más sale del bolsillo de otro jugador, nunca de SELAE.
+
+### Las categorías bajas no se dejan explotar
+
+Para k ≤ 13, el número de acertantes `n_k(r)` **no depende de tu boleto**: te
+viene dado por el resultado de la jornada.
+
+> **No basta con que TU boleto sea raro. Lo que paga en las categorías bajas es
+> que el RESULTADO de la jornada sea raro y tú estés cerca.** Por eso el 10 y el
+> 11 son casi inmunes a la estrategia contraria.
+
+Descomposición del EV (modelo calibrado, N=4 M):
+
+| Boleto | % del EV en el 14 |
+|---|---|
+| Consenso (favoritos) | **9,6 %** |
+| Óptimo contrario | **28,7 %** |
+
+→ Tu hipótesis inicial ("el EV viene de las categorías bajas") **se confirma,
+con un matiz importante: cuanto más contrario es el boleto, más EV migra hacia
+el 14.** La estrategia contraria funciona *convirtiendo* EV de categorías bajas
+y densas en EV de categoría 14 y escasa — con el coste de varianza que implica.
+
+### Dónde colocar los dobles: entropía, no valor
+
+Comparación exacta (mismo boleto base, presupuesto 24 €, 32 apuestas):
+
+| Criterio | Retorno |
+|---|---|
+| 5 dobles por **entropía** (mayor p₂/p₁) | 61,4 % |
+| 5 dobles por **valor** (mayor v₂/v₁) | 50,0 % |
+| 5 dobles por **greedy exacto sobre ΔEV** | **67,3 %** |
+
+**Entre las dos reglas puras gana la entropía, no el valor** — contra la
+intuición. Razón: las combinaciones marginales que añades alimentan sobre todo
+las categorías bajas, donde tu rareza no te protege. Y el greedy exacto elige
+una **mezcla**, así que **no hay regla cerrada correcta**: hay que evaluar el
+ΔEV exacto.
+
+### Las reducidas no mejoran el EV: lo empeoran
+
+Son un dispositivo de **varianza y garantía**, no de valor esperado:
+
+1. El subconjunto se elige por criterio geométrico (cubrir), no por EV. El
+   subconjunto óptimo en EV son "los M de mayor `ev(c)`", que están *agrupados*;
+   una reducida es por construcción lo contrario.
+2. Divide tu probabilidad de acertar el 14 — justo donde vive el efecto contrario.
+3. Quien juega "14 triples al 13" gana un 13 **todas las semanas, siempre**, e
+   inunda esa categoría para todos.
+
+Y la selección de M boletos sueltos es **casi trivial**: el EV es aditivo, así
+que basta ordenar por `ev(c)`. **Para 20 €, 26 combinaciones bien elegidas baten
+a un bloque de 3 triples (27 apuestas)**, porque el bloque te obliga a incluir
+combinaciones que jamás elegirías. El formato "múltiple" es una restricción del
+boleto, no del problema.
+
+### El cuello de botella no es la optimización combinatoria
+
+| Error en tu estimación de `p` | Retorno real |
+|---|---|
+| 0 % | 68,8 % |
+| 5 % | 58,2 % |
+| **10 %** | **53,3 %** ≈ la media del público |
+
+> **Un error del 10 % en las probabilidades devuelve todo a la media.** Y se
+> compone multiplicativamente sobre 14 partidos. **El riesgo dominante del
+> proyecto es el modelo de `p`, no el optimizador.**
+
+### Y es estadísticamente inverificable
+
+Con `sd/coste ≈ 50` y un edge del 10 %, las jornadas necesarias para un
+t-estadístico de 2 son:
+
+```
+n = (2·σ/μ)² = (2·50/0,10)² ≈ 1.000.000 jornadas ≈ 16.000 temporadas
+```
+
+> **Nunca podrás saber, con el P&L de tu propio juego, si tu sistema funciona.**
+> Cualquier peña que presuma de 6 temporadas presenta ~360 jornadas cuando el
+> error estándar exige 10⁶. **Seis temporadas de beneficio son perfectamente
+> compatibles con un EV del 55 %.**
+>
+> **Corolario metodológico: la única validación posible es indirecta.** Valida el
+> modelo de `p` (log-loss contra cuotas de cierre, miles de partidos al año) y el
+> modelo de `q` (predicción de `n₁₀…n₁₄`, 5 observaciones por jornada).
+> **Nunca valides sobre el P&L.**
+
+### Por qué "comprar el pozo" no funciona aquí
+
+Los casos documentados de EV+ (Cash WinFall/MIT, Irish Lotto 1992, Stefan
+Mandel) son **loterías**, y todos consisten en comprar (casi) todas las
+combinaciones. La aritmética de la quiniela lo impide:
+
+- Comprar las 4.782.969 combinaciones cuesta **3.587.226,75 €**.
+- De esos 4,78 M de boletos, **solo 19.321 ganan algo**.
+- Tu propia compra infla la recaudación a 6,59 M€. Incluso capturando el **100 %**
+  de todos los premios (imposible), obtendrías 3,62 M€ frente a un coste de
+  3,59 M€: **empate técnico en el mejor caso absoluto**.
+
+**Razón estructural:** en una lotería el premio se reparte entre *billetes
+ganadores* y comprar todo te da exactamente uno. En la quiniela se reparte entre
+*apuestas ganadoras* y comprar todo te da 19.321 diluidas entre sí. **La palanca
+no existe.**
+
+### La única recomendación que no necesita modelo
+
+> **Nunca juegues la columna de consenso.** El boleto de favoritos se degrada de
+> forma monótona conforme aumenta el sesgo del público (del 91 % con `q = p`
+> hasta el 13 % con sesgo fuerte). No hace falta un modelo bueno para saberlo:
+> basta con los porcentajes de LAE.
+
+Implementado como `consensusWarning`, que además cuantifica con cuánta gente
+compartirías.
+
+### Kelly: el número que pone todo en perspectiva
+
+| Bote | Retorno | sd/coste | Banco necesario para 1 apuesta de 0,75 € |
+|---|---|---|---|
+| 0 | 69,5 % | 164 | — (EV<0, no jugar) |
+| 4 M € | 127 % | 630 | **714.715 €** |
+| 6 M € | 154 % | 852 | **481.814 €** |
+| 30 M € | 482 % | 3.510 | 283.147 € |
+
+Incluso con un edge del **+54 %**, Kelly dice que arriesgues 1,56 millonésimas
+de tu banco por apuesta. Para jugar un boleto de 20 € en régimen Kelly harían
+falta **~13 millones de euros**.
+
+---
+
 ## 9. Expectativas realistas
 
 Hay que decirlo sin adornos:
@@ -506,6 +697,40 @@ Hay que decirlo sin adornos:
   razonable de que la propia difusión del método erosiona la ineficiencia.
 - **Techo de predicción:** Primera Brier ≈ 0,565 y ~55 % de acierto del favorito;
   Segunda ≈ 0,624 y ~47 %. **Ese es el límite del mercado, no el de tu modelo.**
+
+### El umbral exacto
+
+Simulación sobre modelo calibrado, barriendo la intensidad del sesgo del público:
+
+| TVD(p,q) media por partido | Mejor boleto | Boleto favorito |
+|---|---|---|
+| 0,007 (`q ≈ p`) | 91,2 % | 91,2 % |
+| **0,040 (realista)** | **69,5 %** | **42,6 %** |
+| 0,061 | 80,1 % | 31,4 % |
+| **≈0,095 (equilibrio)** | **≈100 %** | ≈20 % |
+
+> **Respuesta cuantitativa:** con RTP del 55 %, la selección contraria alcanza
+> EV≥0 **solo si la discrepancia media entre los porcentajes del público y las
+> probabilidades reales supera ~9–10 puntos porcentuales por partido,
+> sostenidamente en los 14.** Es decir, el signo de mejor valor debería estar de
+> media un ~35 % infrajugado. **No es plausible.**
+
+Para contexto: el caso extremo documentado (público 82 % vs probabilidad real
+67 %) es TVD ≈ 0,10 en *ese* partido. Harían falta catorce así, cada semana.
+
+Con bote, en cambio, el punto de equilibrio cae a **~1,5–2 M €** para un boleto
+optimizado. Y ojo al matiz: **un bote grande desplaza el óptimo LEJOS del
+contrarianismo hacia la probabilidad pura** (λ óptimo salta de ~4 a ~14–21). Con
+bote manda acertar; sin bote, manda ser distinto.
+
+### Cuándo jugar
+
+De todo lo anterior se sigue una regla operativa simple: **jugar solo cuando
+(a) hay bote ≥ ~1,5–2 M €, y/o (b) la discrepancia modelo/público de esa jornada
+está en el decil alto histórico. El resto de semanas, no jugar es la jugada
+óptima.**
+
+---
 
 **Qué es este proyecto, entonces:** un ejercicio serio de modelado estadístico y
 teoría de juegos sobre un problema con datos públicos excelentes, que puede
@@ -531,8 +756,10 @@ Con esa expectativa bien puesta, es un proyecto excelente.
 6. **Optimizar EV, no probabilidad de acierto.** Son cosas distintas en un juego
    mutualista, y confundirlas es el error central de casi todos los sistemas que
    circulan.
-7. **Los dobles van donde hay máxima discrepancia modelo/público**, no donde hay
-   máxima incertidumbre.
+7. **El contrarianismo pertenece a la columna BASE; los dobles y triples se
+   gastan sobre todo en probabilidad.** Mezclar ambos criterios en la misma
+   decisión es el error conceptual típico — y es el que yo mismo cometí en la
+   primera versión de este documento. Ver §9.bis.
 8. **Validación walk-forward con corte estricto por fecha.** Cortar por índice
    deja entrar partidos de la misma jornada: fuga sutil y muy común.
 9. **Todo lo que toca red, detrás de una interfaz con fixtures grabados**, para
