@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest'
-import { baseRateModel, walkForward } from '../eval/backtest.js'
+import {
+  IRREDUCIBLE_NOISE_FLOOR,
+  baseRateModel,
+  looksLikeDataLeakage,
+  tuneHalfLife,
+  walkForward,
+} from '../eval/backtest.js'
 import { fitDixonColes, probs1X2, scorelineMatrix } from '../model/dixon-coles.js'
 import type { MatchResult, Probs1X2 } from '../types.js'
 
@@ -130,5 +136,45 @@ describe('walkForward', () => {
     expect(() => walkForward(matches.slice(0, 10), () => () => undefined, { minTrain: 500 })).toThrow(
       /insuficiente/,
     )
+  })
+})
+
+describe('suelo de ruido y ajuste de la semivida', () => {
+  it('detecta un RPS sospechosamente bueno como probable fuga de datos', () => {
+    // Incluso quien conociera las probabilidades verdaderas sacaria ~0,202.
+    // Un backtest muy por debajo no es un modelo genial, es una fuga.
+    expect(looksLikeDataLeakage({ rps: 0.15 })).toBe(true)
+    expect(looksLikeDataLeakage({ rps: 0.2 })).toBe(false)
+    expect(looksLikeDataLeakage({ rps: 0.25 })).toBe(false)
+  })
+
+  it('el suelo de ruido es coherente con las metricas del mercado real', () => {
+    // El mercado ronda RPS 0,198 y los mejores modelos publicados 0,1925-0,2063.
+    expect(IRREDUCIBLE_NOISE_FLOOR.rps).toBeGreaterThan(0.19)
+    expect(IRREDUCIBLE_NOISE_FLOOR.rps).toBeLessThan(0.21)
+  })
+
+  it('tuneHalfLife devuelve las semividas ordenadas por RPS', () => {
+    const matches = syntheticLeague(321, 60)
+    const r = tuneHalfLife(
+      matches,
+      (halfLifeDays) => (history) => {
+        const params = fitDixonColes(history, { iterations: 300, halfLifeDays })
+        return (match): Probs1X2 | undefined => {
+          try {
+            return probs1X2(
+              scorelineMatrix(params, match.homeTeam, match.awayTeam, match.competition),
+            )
+          } catch {
+            return undefined
+          }
+        }
+      },
+      [180, 380],
+      { minTrain: 600, blockSize: 120 },
+    )
+    expect(r).toHaveLength(2)
+    expect(r[0]!.rps).toBeLessThanOrEqual(r[1]!.rps)
+    expect(r.every((x) => x.rps > 0 && x.rps < 1)).toBe(true)
   })
 })

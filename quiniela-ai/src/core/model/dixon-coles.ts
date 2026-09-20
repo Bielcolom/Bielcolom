@@ -39,7 +39,7 @@ export interface DixonColesParams {
 }
 
 export interface FitOptions {
-  /** Semivida del decaimiento temporal. ~180 dias es un punto de partida razonable. */
+  /** Semivida del decaimiento temporal. Ver DEFAULT_HALF_LIFE_DAYS. */
   readonly halfLifeDays?: number
   /** Fecha de referencia del decaimiento. Por defecto, el partido mas reciente. */
   readonly asOf?: Date
@@ -52,8 +52,30 @@ export interface FitOptions {
   readonly maxGoals?: number
 }
 
+/**
+ * Semivida del decaimiento temporal, en dias.
+ *
+ * CUIDADO CON ESTE VALOR: es el error de implementacion mas extendido de todo
+ * el metodo. Dixon y Coles publican xi = 0,0065, pero su unidad de tiempo son
+ * MEDIAS SEMANAS (3,5 dias), no dias. Implementar exp(-0,0065 * dias) da una
+ * semivida de 107 dias en lugar de 373: descarta casi toda la temporada
+ * anterior y convierte los parametros en ruido.
+ *
+ *   xi por dia = 0,0065 / 3,5 = 0,00186  ->  semivida = ln(2)/0,00186 = 373 dias
+ *
+ * Ley, Van de Wiele y Van Eetvelde (2019) llegaron de forma independiente a
+ * 390 dias optimizando sobre 10 temporadas de Premier. La coincidencia
+ * confirma la lectura.
+ *
+ * Aun asi, lo correcto es optimizarlo por liga: xi NO se puede estimar junto
+ * con los demas parametros (maximizar la verosimilitud en xi degenera hacia
+ * cero). Hay que barrer una rejilla y elegir el que minimice el RPS fuera de
+ * muestra en un walk-forward completo. Ver `tuneHalfLife`.
+ */
+export const DEFAULT_HALF_LIFE_DAYS = 380
+
 const DEFAULTS = {
-  halfLifeDays: 180,
+  halfLifeDays: DEFAULT_HALF_LIFE_DAYS,
   iterations: 4000,
   learningRate: 0.05,
   ridge: 0.02,

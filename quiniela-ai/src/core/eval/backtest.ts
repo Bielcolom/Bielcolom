@@ -142,3 +142,49 @@ export function baseRateModel(history: readonly MatchResult[]): Probs1X2 {
   const n = Math.max(1, history.length)
   return { home: h / n, draw: d / n, away: a / n }
 }
+
+/**
+ * Suelo de ruido irreducible del futbol.
+ *
+ * Calculado por simulacion para una liga top: incluso un pronosticador que
+ * conociera las probabilidades VERDADERAS de cada partido obtendria
+ * aproximadamente estos valores, porque el resto es azar puro.
+ *
+ * Contexto: los mejores modelos publicados estan en RPS 0,1925-0,2063 y el
+ * mercado en ~0,198. Es decir, el estado del arte ya esta tocando el suelo.
+ * No hay un modelo magico esperando a ser descubierto.
+ *
+ * Uso practico: si un backtest devuelve un RPS claramente por debajo de este
+ * suelo, la explicacion casi segura no es que el modelo sea genial, sino que
+ * hay fuga de datos.
+ */
+export const IRREDUCIBLE_NOISE_FLOOR = {
+  rps: 0.202,
+  logLoss: 0.985,
+  hitRate: 0.52,
+} as const
+
+export function looksLikeDataLeakage(score: { rps: number }): boolean {
+  return score.rps < IRREDUCIBLE_NOISE_FLOOR.rps * 0.9
+}
+
+/**
+ * Busca la semivida optima barriendo una rejilla y midiendo el RPS fuera de
+ * muestra. Es el procedimiento correcto: la semivida no se puede estimar
+ * conjuntamente con el resto de parametros.
+ */
+export function tuneHalfLife(
+  matches: readonly MatchResult[],
+  buildTrainer: (
+    halfLifeDays: number,
+  ) => (history: readonly MatchResult[]) => (match: MatchResult) => Probs1X2 | undefined,
+  candidates: readonly number[] = [120, 180, 250, 320, 380, 450, 550, 700],
+  options: BacktestOptions = {},
+): { halfLifeDays: number; rps: number }[] {
+  return candidates
+    .map((halfLifeDays) => ({
+      halfLifeDays,
+      rps: walkForward(matches, buildTrainer(halfLifeDays), options).overall.rps,
+    }))
+    .sort((a, b) => a.rps - b.rps)
+}
