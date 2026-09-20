@@ -1,0 +1,17 @@
+{
+  "name": "quiniela-ai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Motor de prediccion y optimizacion de carteras para La Quiniela (LAE)",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
