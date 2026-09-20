@@ -96,8 +96,9 @@ export function probabilityOfFull14(
  * columna. Se calcula por convolucion sobre los 14 partidos: en cada paso, la
  * probabilidad de haber acertado k de los partidos vistos hasta ahora.
  *
- * Hace falta para el valor esperado real, porque las categorias de 10 a 13
- * aciertos pesan mucho mas en el EV de lo que la gente supone.
+ * Hace falta para el valor esperado real: las categorias de 10 a 13 aciertos
+ * caen con frecuencia muchisimo mayor que el pleno, asi que su aportacion al
+ * EV es material y hay que calcularla, no suponerla.
  */
 export function hitDistribution(
   column: Column,
